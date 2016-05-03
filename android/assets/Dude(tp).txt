@@ -1,0 +1,12 @@
+Dude(tp).png
+size: 40, 65
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dude
+  rotate: false
+  xy: 0, 0
+  size: 40, 65
+  orig: 40, 65
+  offset: 0, 0
+  index: -1

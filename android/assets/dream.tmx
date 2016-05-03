@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="240" height="13" tilewidth="16" tileheight="16" nextobjectid="27">
+ <tileset firstgid="1" name="levelsheet" tilewidth="16" tileheight="16" tilecount="629" columns="37">
+  <image source="Dream/levelsheet.png" width="594" height="282"/>
+ </tileset>
+ <objectgroup name="ground">
+  <object id="26" x="0.363636" y="192" width="2736" height="16"/>
+ </objectgroup>
+ <layer name="background" width="240" height="13" opacity="0.9">
+  <data encoding="base64" compression="zlib">
+   eJzt1kkVwlAQRcEfCEghA1KY4l8NT0bndC3uphTcaYxxSdc0p1u6p4lzXt4faUlr2tKenpzzU/grvdMnfdMvHZzzU3i1H+Cc+2fOO3i1H+Cc+2fOO3i1H+Cc+2fOO3i1H+Cc+2fOO3i1H+Cc+2fOO/gfZ93K+A==
+  </data>
+ </layer>
+ <layer name="floor" width="240" height="13">
+  <data encoding="base64" compression="zlib">
+   eJztwwEJAAAAAqD+L2huOwIFEwAAAAAAAAAAAACAD1VvD410joE=
+  </data>
+ </layer>
+</map>

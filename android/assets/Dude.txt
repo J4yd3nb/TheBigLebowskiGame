@@ -1,0 +1,12 @@
+dude.png
+size: 45, 65
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dude1
+  rotate: false
+  xy: 4, 1
+  size: 27, 63
+  orig: 27, 63
+  offset: 0, 0
+  index: -1
