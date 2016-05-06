@@ -19,6 +19,7 @@ public class Coin extends InteractiveTileObject
         super(world, level, bounds);
         fixture.setUserData(this); //"this" setting the data to the object itself
                                 //also enables access to this particular object (coin for example)
+        setCategoryFilter(biglebowski.COIN_BIT);
     }
 
     @Override

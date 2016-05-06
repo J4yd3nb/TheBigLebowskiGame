@@ -2,9 +2,11 @@ package com.halfshaved.blg.Sprites;
 
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TiledMapTile;
+import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
+import com.badlogic.gdx.physics.box2d.Filter;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
@@ -47,5 +49,18 @@ public abstract class InteractiveTileObject
     }
 
     public abstract void onHeadHit();
+    public void setCategoryFilter(short filterBit)
+    {
+        Filter filter = new Filter(); //"can use this if you don't have access to the fixture definition itself"
+        filter.categoryBits = filterBit;
+        fixture.setFilterData(filter);
+    }
 
+    public TiledMapTileLayer.Cell getCell()
+    {
+        TiledMapTileLayer layer = (TiledMapTileLayer) level.getLayers().get(0); //type casting *IN LEVEL1.TMX THE LAYERS ARE STUFF UP
+        return layer.getCell((int)(body.getPosition().x * biglebowski.PPM / 16),(int)(body.getPosition().y * biglebowski.PPM / 16)); //type casting as-well
+                                                        //scaled up so it will look identical to the Tiled Map
+                                                                        //then divided by 16 to get it at the correct tile location
+    }
 }

@@ -122,7 +122,7 @@ public class TheDude extends Sprite //P.S. NO 'draw' METHOD IS NEEDED IN OUR 'Th
             return State.STANDING;
     }
 
-    public void defineTheDude()
+    public void defineTheDude() //the dude has his(hat sensor) connected to the actual body (both use fdef)
     {
         //defining the Dude's characteristics
         BodyDef bdef = new BodyDef();
@@ -133,6 +133,8 @@ public class TheDude extends Sprite //P.S. NO 'draw' METHOD IS NEEDED IN OUR 'Th
         FixtureDef fdef = new FixtureDef();
         CircleShape cshape = new CircleShape();
         cshape.setRadius(6/ biglebowski.PPM);
+        fdef.filter.categoryBits = biglebowski.DUDE_BIT; //giving a catalogue bit for the fixture PS has to be above any creating of fixtures
+        fdef.filter.maskBits = biglebowski.DEFAULT_BIT | biglebowski.COIN_BIT | biglebowski.BRICK_BIT; //sets what TheDude can collide with
 
         fdef.shape = cshape;
         b2body.createFixture(fdef);
